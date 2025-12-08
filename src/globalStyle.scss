@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// =============================================================================
+// VARIÁVEIS
+// =============================================================================
+// Cores
+$color-primary: #00745A;
+$color-text-black: #000;
+$color-footer-bg: #0B0B0B;
+$color-placeholder: #999999;
+$color-white: #fff;
+$color-light-gray: #E5E5E5;
+$color-off-white: #F8F8F8;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// =============================================================================
+// RESET E CONFIGURAÇÕES GLOBAIS
+// =============================================================================
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}

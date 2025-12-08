@@ -1,0 +1,33 @@
+@import '../../globalStyle.scss';
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid $color-text-black;
+    .mainHeader {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        img {
+            padding-right: 8px;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        .linkHome {
+            padding-right: 20px;
+        }
+    }
+}
+
+.links, .linkHome, .linkVoluntario {
+    text-decoration: none;
+    color: $color-text-black;
+}
