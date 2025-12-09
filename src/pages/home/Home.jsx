@@ -22,6 +22,7 @@ const Home = () => {
             Um projeto dedicado a oferecer atendimento médico e odontológico
             gratuito para pessoas que mais precisam na nossa comunidade.
           </p>
+          
           <div className={s.buttons}>
             <Button
               to='/seja-voluntario'
@@ -61,6 +62,34 @@ const Home = () => {
           <Article
             h3='Bem-estar Total'
             texto='Oferecer atendimento integral em medicina geral e odontologia para melhorar a qualidade de vida.'
+            className={s.article}
+          />
+        </div>
+      </section>
+
+      <section className={s.impacto}>
+        <h2>Nosso Impacto</h2>
+        <p>Transformando a saúde de nossa comunidade, um paciente de cada vez</p>
+
+        <div className={s.articles}>
+          <Article
+            h3='2,500+'
+            texto='Pessoas Atendidas'
+            className={s.article}
+          />
+          <Article
+            h3='150+'
+            texto='Profissionais Voluntários'
+            className={s.article}
+          />
+          <Article
+            h3='98%'
+            texto='Satisfação dos Pacientes'
+            className={s.article}
+          />
+          <Article
+            h3='5+'
+            texto='Anos de Dedicação'
             className={s.article}
           />
         </div>

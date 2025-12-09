@@ -3,9 +3,9 @@
 
 // Estilos gerais
 h1 {
-    font-size: 4.188rem;
-    font-weight: bold;
-    text-shadow: 0 4px 4px rgba($color: variaveis.$color-text-black, $alpha: 0.25);
+  font-size: 4.188rem;
+  font-weight: bold;
+  text-shadow: 0 4px 4px rgba($color: variaveis.$color-text-black, $alpha: 0.25);
 }
 
 h2 {
@@ -19,7 +19,7 @@ h3 {
 }
 
 p {
-    font-size: 1.438rem;
+  font-size: 1.438rem;
 }
 
 // Primeira seção
@@ -59,33 +59,33 @@ p {
         font-weight: 500;
       }
     }
+
+    .buttons {
+      display: flex;
+
+      .linkVoluntario {
+        @include mixins.button;
+        background-color: variaveis.$color-primary;
+        margin-right: 40px;
+        color: variaveis.$color-white;
+      }
+
+      .linkAjuda {
+        @include mixins.button;
+        color: variaveis.$color-primary;
+        border: 2px solid variaveis.$color-primary;
+      }
+    }
   }
-}
-
-// Botões
-.buttons {
-    display: flex;
-
-    .linkVoluntario {
-      @include mixins.button;
-      background-color: variaveis.$color-primary;
-      margin-right: 40px;
-      color: white;
-    }
-
-    .linkAjuda {
-      @include mixins.button;
-      color: variaveis.$color-primary;
-      border: 2px solid variaveis.$color-primary;
-    }
 }
 
 // Seção Missão
 .missao {
   background-color: variaveis.$color-primary;
   padding: 5% 5%;
-  
-  h2, p {
+
+  h2,
+  p {
     color: variaveis.$color-white;
   }
 
@@ -94,14 +94,43 @@ p {
   }
 
   .articles {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    @include mixins.articles;
 
     article {
       @include mixins.article;
       color: variaveis.$color-white;
       border-color: variaveis.$color-white;
+    }
+  }
+}
+
+// Seção Impacto
+.impacto {
+  padding: 5% 5%;
+
+  h2 {
+    font-size: 3.75rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 3.125rem;
+    font-weight: bold;
+    color: variaveis.$color-primary;
+    margin-top: 1rem;
+  }
+
+  p {
+    margin-top: 30px;
+  }
+
+  .articles {
+    @include mixins.articles;
+
+    article {
+      @include mixins.article;
+      color: variaveis.$color-text-black;
+      border-color: variaveis.$color-text-black;
     }
   }
 }
