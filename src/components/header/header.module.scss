@@ -9,12 +9,9 @@ header {
     padding: 2rem 1.5rem;
     border-bottom: 1px solid variaveis.$color-text-black;
     .mainHeader {
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-
-        img {
-            margin-right: 8px;
+        @include mixins.main;
+        .links {
+            color: variaveis.$color-text-black;
         }
     }
 
@@ -26,6 +23,7 @@ header {
             margin-right: 30px;
             font-size: 20px;
             font-weight: 500;
+            color: variaveis.$color-text-black;
         }
 
         .linkVoluntario {
@@ -34,9 +32,4 @@ header {
             color: white;
         }
     }
-}
-
-.links, .linkHome, .linkVoluntario {
-    text-decoration: none;
-    color: variaveis.$color-text-black;
 }

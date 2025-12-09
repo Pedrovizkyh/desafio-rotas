@@ -12,6 +12,7 @@
     border-radius: 14px;
     padding: 44px 50px;
     text-align: center;
+    margin-top: 50px;
 
     max-width: 450px;
     max-height: 242px;
@@ -26,6 +27,23 @@
 
 @mixin articles {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px;
+}
+
+@mixin main {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 8px;
+    }
+
+    .links {
+        h1 {
+            font-size: 1.125rem;
+            font-weight: bold;
+            text-shadow: none;
+        }
+    }
 }
