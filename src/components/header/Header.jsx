@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './header.module.scss'
+import Button from '../button/Button'
+
 
 const Header = () => {
   return (
@@ -10,8 +12,8 @@ const Header = () => {
             <Link to='/' className={s.links}>Médicos & Dentistas</Link>
         </div>
         <nav>
-            <Link to='/' className={s.linkHome}>Home</Link>
-            <Link to='/seja-voluntario' className={s.linkVoluntario}>Seja Voluntário</Link>
+          <Link to='/' className={s.linkHome}>Home</Link>
+          <Button to='/seja-voluntario' className={s.linkVoluntario} texto='Seja Voluntário' />
         </nav>
     </header>
   )
