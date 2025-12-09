@@ -5,7 +5,7 @@ import Button from '../../components/button/Button';
 const Home = () => {
   return (
     <main className={s.main}>
-      <section>
+      <section className={s.firstMain}>
         <div className={s.mainTitle}>
           <div className={s.icon}>
             <img
@@ -40,6 +40,11 @@ const Home = () => {
           alt="Medico feito por I.A"
           className={s.medico}
         />
+      </section>
+
+      <section>
+        <h2>Nossa Missão</h2>
+        <p>Transformar vidas através do acesso universal a saúde de qualidade</p>
       </section>
     </main>
   );
