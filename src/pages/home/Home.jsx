@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './home.module.scss';
 import Button from '../../components/button/Button';
+import Article from '../../components/article/Article';
 
 const Home = () => {
   return (
@@ -42,9 +43,27 @@ const Home = () => {
         />
       </section>
 
-      <section>
+      <section className={s.missao}>
         <h2>Nossa Missão</h2>
         <p>Transformar vidas através do acesso universal a saúde de qualidade</p>
+        
+        <div className={s.articles}>
+          <Article
+            h3='Acesso Equitativo'
+            texto='Garantir que todos tenham acesso a cuidados de saúde de qualidade, independentemente de sua condição financeira.'
+            className={s.article}
+          />
+          <Article
+            h3='Comunidade Forte'
+            texto='Construir uma rede de profissionais de saúde dedicados a servir com compaixão e profissionalismo.'
+            className={s.article}
+          />
+          <Article
+            h3='Bem-estar Total'
+            texto='Oferecer atendimento integral em medicina geral e odontologia para melhorar a qualidade de vida.'
+            className={s.article}
+          />
+        </div>
       </section>
     </main>
   );

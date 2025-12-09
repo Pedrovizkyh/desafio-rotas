@@ -1,6 +1,25 @@
+@use './variaveis';
+
 @mixin button {
     padding: 20px 30px;
     border-radius: 11px;
     font-weight: 500;
     font-size: 20px;
 }
+
+@mixin article {
+    border: 1px solid variaveis.$color-text-black;
+    border-radius: 14px;
+    padding: 44px 50px;
+    text-align: center;
+
+    max-width: 450px;
+    max-height: 242px;
+    min-width: 317px;
+    min-height: 244px;
+
+    p {
+        margin-top: 30px;
+        font-size: 1.25rem;
+    }
+  }

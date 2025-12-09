@@ -1,8 +1,0 @@
-@use '../../styles/mixins';
-@use '../../styles/variaveis';
-
-.linkVoluntario {
-    @include mixins.button;
-    background-color: variaveis.$color-primary;
-    color: white;
-}
