@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './footer.module.scss'
 import Email from '../../assets/email.png'
+import Telefone from '../../assets/telefone.png'
+import Mapa from '../../assets/mapa.png'
 
 const Footer = () => {
   return (
@@ -22,11 +24,11 @@ const Footer = () => {
                         <p>contato@medico-dentista.org</p>
                     </div>
                     <div className={s.card}>
-                        <img src="./src/assets/telefone.png" alt="Icone de um telefone" />
+                        <img src={Telefone} alt="Icone de um telefone" />
                         <p>(11) 3000-0000</p>
                     </div>
                     <div className={s.card}>
-                        <img src="./src/assets/mapa.png" alt="Icone de um mapa" />
+                        <img src={Mapa} alt="Icone de um mapa" />
                         <p>São Paulo, Brasil</p>
                     </div>
                 </div>

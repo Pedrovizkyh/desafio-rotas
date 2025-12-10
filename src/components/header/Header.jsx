@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './header.module.scss'
 import Button from '../button/Button'
+import Coracao from '../../assets/coracao.png'
 
 
 const Header = () => {
   return (
     <header className={s.header}>
         <div className={s.mainHeader}>
-            <img src="./src/assets/coracao.png" alt="Imagem de um coração" />
+            <img src={Coracao} alt="Imagem de um coração" />
             <Link to='/' className={s.links}><h1>Médicos & Dentistas</h1></Link>
         </div>
         <nav>
