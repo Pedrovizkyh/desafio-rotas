@@ -27,8 +27,4 @@
   
   p {
     font-size: 1.438rem;
-
-    @media (max-width: variaveis.$breakpoint-missao) {
-      text-align: center;
-    }
 }

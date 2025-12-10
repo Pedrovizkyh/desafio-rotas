@@ -109,6 +109,9 @@
   h2,
   p {
     color: variaveis.$color-white;
+    @media (max-width: variaveis.$breakpoint-missao) {
+      text-align: center;
+    }
   }
 
   p {
@@ -141,6 +144,10 @@
   h2 {
     font-size: 3.75rem;
     font-weight: bold;
+
+    @media (max-width: variaveis.$breakpoint-missao) {
+      text-align: center;
+    }
   }
 
   h3 {
@@ -152,6 +159,10 @@
 
   p {
     margin: 30px 0;
+    
+    @media (max-width: variaveis.$breakpoint-missao) {
+      text-align: center;
+    }
   }
 
   .articles {
