@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './footer.module.scss'
+import Coracao from '../../assets/coracao.png'
 import Email from '../../assets/email.png'
 import Telefone from '../../assets/telefone.png'
 import Mapa from '../../assets/mapa.png'
@@ -11,7 +12,7 @@ const Footer = () => {
         <section className={s.footerCima}>
             <section className={s.footerMain}>
                 <div className={s.titulo}>
-                    <img src="./src/assets/coracao.png" alt="Imagem de um coração" />
+                    <img src={Coracao} alt="Imagem de um coração" />
                     <Link to='/' className={s.links}><h1>Médicos & Dentistas</h1></Link>
                 </div>
                 <p>Saúde e cuidado sem barreiras para toda comunidade.</p>
