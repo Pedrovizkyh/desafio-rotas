@@ -5,7 +5,7 @@
     border-radius: 11px;
     font-weight: 500;
     font-size: 20px;
-    text-align: center !important;
+    text-align: center;
 }
 
 @mixin article {
@@ -27,7 +27,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     
-    @media (max-width: variaveis.$breakpoint-tablet) {
+    @media (max-width: variaveis.$breakpoint-notebook) {
         justify-content: center;;
       }
 }

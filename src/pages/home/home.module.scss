@@ -12,7 +12,7 @@
   background-position: right;
   background-size: contain;
 
-  @media (max-width: 1350px) {
+  @media (max-width: variaveis.$breakpoint-header) {
     background-image: none;
     text-align: center;
     justify-content: center;
@@ -36,6 +36,14 @@
 
     p {
       font-size: 1.563rem;
+
+      @media (max-width: variaveis.$breakpoint-header) {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: variaveis.$breakpoint-header) {
+      height: 700px;
     }
 
     .icon {
@@ -50,7 +58,7 @@
       background-color: variaveis.$color-light-gray;
       font-weight: bold;
 
-      @media (max-width: 1350px) {
+      @media (max-width: variaveis.$breakpoint-header) {
         margin: 100px auto 0 auto;
     }
 
@@ -66,11 +74,11 @@
 
     .buttons {
       display: flex;
+      gap: 40px;
 
       .linkVoluntario {
         @include mixins.button;
         background-color: variaveis.$color-primary;
-        margin-right: 40px;
         color: variaveis.$color-white;
       }
 
@@ -81,15 +89,17 @@
       }
 
       .linkVoluntario, .linkAjuda {
-        @media (max-width: 1350px) {
-          display: flex;
-          flex: 1;
-          gap: 3%;
-          padding: 0 auto;
-          text-align: center;
-          justify-content: center; // Adicione esta linha
-          align-items: center; // Adicione esta linha
-        }
+        display: flex;
+        flex: 1;
+        padding: 0 auto;
+        text-align: center;
+        justify-content: center;  
+        align-items: center;
+      }
+
+      @media (max-width: variaveis.$breakpoint-header) {
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }
@@ -103,9 +113,6 @@
   h2,
   p {
     color: variaveis.$color-white;
-    @media (max-width: variaveis.$breakpoint-tablet) {
-      text-align: center;
-    }
   }
 
   p {

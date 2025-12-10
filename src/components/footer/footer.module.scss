@@ -5,9 +5,13 @@ footer {
     background-color: variaveis.$color-footer-bg;
     color: variaveis.$color-white; 
 
-    h3 {
+    h3, h1 {
         font-size: 1rem;
-        padding-bottom: 16px;
+        padding: 16px 0;
+
+        @media (max-width: variaveis.$breakpoint-tablet) {
+            padding-top: 40px;
+        }
     }
     
     p {
@@ -17,11 +21,13 @@ footer {
 
 .footerCima {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 2.7% 10%;
 }
 
 .footerMain {
+    margin: 0 17px;
     .titulo {
         @include mixins.main;
         margin-bottom: 16px;
@@ -50,7 +56,7 @@ footer {
 }
 
 .social {
-
+    margin: 0 17px;
     .linkRedes {
         display: flex;
         flex-direction: column;
