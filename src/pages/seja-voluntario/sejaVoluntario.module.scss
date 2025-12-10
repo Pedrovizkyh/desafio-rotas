@@ -22,7 +22,6 @@
         .article {
             @include mixins.article;
             max-width: 461px;
-            min-width: 461px;
 
             h3 {
                 font-size: 1.875rem;

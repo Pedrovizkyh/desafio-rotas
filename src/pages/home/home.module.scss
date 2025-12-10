@@ -22,10 +22,10 @@
   .mainTitle {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-width: 560px;
+    justify-content: flex-start;
+    gap: 2rem;
     max-width: 560px;
-    height: 585px;
+    min-height: 585px;
     margin-right: 50px;
 
     h1 {
@@ -42,10 +42,6 @@
       }
     }
 
-    @media (max-width: variaveis.$breakpoint-header) {
-      height: 700px;
-    }
-
     .icon {
       display: flex;
       align-items: center;
@@ -53,7 +49,7 @@
       width: 244px;
       height: 55px;
       padding: 10px;
-      margin-top: 100px;
+      margin-top: 10%;
       border-radius: 30px;
       background-color: variaveis.$color-light-gray;
       font-weight: bold;
@@ -129,7 +125,6 @@
       color: variaveis.$color-white;
       border-color: variaveis.$color-white;
       max-width: 450px;
-      min-width: 450px;
       
       h3 {
         font-size: 1.875rem;
@@ -167,7 +162,6 @@
       color: variaveis.$color-text-black;
       border-color: variaveis.$color-text-black;
       max-width: 317px;
-      min-width: 317px;
     }
   }
 }
