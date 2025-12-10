@@ -3,6 +3,8 @@ import s from './home.module.scss';
 import Button from '../../components/button/Button';
 import Article from '../../components/article/Article';
 
+import Estetoscopio from '../../assets/estetoscopio.png'
+
 const Home = () => {
   return (
     <main className={s.main}>
@@ -10,7 +12,7 @@ const Home = () => {
         <div className={s.mainTitle}>
           <div className={s.icon}>
             <img
-              src="./src/assets/estetoscopio.png"
+              src={Estetoscopio}
               alt="icone de um estetoscópio"
             />
             <p>Saúde para todos</p>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './footer.module.scss'
+import Email from '@/assets/email.png'
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
                 <h3>Contato</h3>
                 <div className={s.linkRedes}>
                     <div className={s.card}>
-                        <img src="./src/assets/email.png" alt="Icone de um email" />
+                        <img src={Email} alt="Icone de um email" />
                         <p>contato@medico-dentista.org</p>
                     </div>
                     <div className={s.card}>
