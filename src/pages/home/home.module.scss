@@ -3,16 +3,30 @@
 
 // Primeira seção
 .firstMain {
-  padding: 2% 5%;
+  margin: 2% 5%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  background-image: url(../../assets/medico.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  @media (max-width: 1350px) {
+    background-image: none;
+    text-align: center;
+    justify-content: center;
+  }
+  
 
   .mainTitle {
     display: flex;
     flex-direction: column;
-    width: 560px;
     justify-content: space-between;
+    min-width: 560px;
+    max-width: 560px;
+    height: 585px;
+    margin-right: 50px;
 
     h1 {
       font-size: 4.188rem;
@@ -28,15 +42,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50%;
+      width: 244px;
+      height: 55px;
       padding: 10px;
       margin-top: 100px;
       border-radius: 30px;
       background-color: variaveis.$color-light-gray;
       font-weight: bold;
 
+      @media (max-width: 1350px) {
+        margin: 100px auto 0 auto;
+    }
+
       img {
-        margin-right: 10px;
+        margin-right: 8px;
       }
 
       p {
@@ -60,6 +79,18 @@
         color: variaveis.$color-primary;
         border: 2px solid variaveis.$color-primary;
       }
+
+      .linkVoluntario, .linkAjuda {
+        @media (max-width: 1350px) {
+          display: flex;
+          flex: 1;
+          gap: 3%;
+          padding: 0 auto;
+          text-align: center;
+          justify-content: center; // Adicione esta linha
+          align-items: center; // Adicione esta linha
+        }
+      }
     }
   }
 }
@@ -72,6 +103,9 @@
   h2,
   p {
     color: variaveis.$color-white;
+    @media (max-width: variaveis.$breakpoint-tablet) {
+      text-align: center;
+    }
   }
 
   p {
@@ -80,6 +114,8 @@
 
   .articles {
     @include mixins.articles;
+    flex: 3;
+    //justify-content: center;
 
     article {
       @include mixins.article;

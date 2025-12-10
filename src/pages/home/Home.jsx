@@ -36,12 +36,6 @@ const Home = () => {
             />
           </div>
         </div>
-        
-        <img
-          src="./src/assets/medico.png"
-          alt="Medico feito por I.A"
-          className={s.medico}
-        />
       </section>
 
       <section className={s.missao}>

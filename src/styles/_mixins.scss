@@ -5,6 +5,7 @@
     border-radius: 11px;
     font-weight: 500;
     font-size: 20px;
+    text-align: center !important;
 }
 
 @mixin article {
@@ -13,6 +14,7 @@
     padding: 44px 50px;
     text-align: center;
     margin-top: 50px;
+    margin-right: 20px;
     
     p {
         margin-top: 30px;
@@ -24,6 +26,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
+    @media (max-width: variaveis.$breakpoint-tablet) {
+        justify-content: center;;
+      }
 }
 
 @mixin main {

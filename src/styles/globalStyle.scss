@@ -19,8 +19,15 @@
   h2 {
     font-size: 3.75rem;
     font-weight: bold;
+
+    @media (max-width: variaveis.$breakpoint-tablet) {
+      text-align: center;
+    }
 }
   
   p {
     font-size: 1.438rem;
+    @media (max-width: variaveis.$breakpoint-tablet) {
+      text-align: center;
+    }
 }
