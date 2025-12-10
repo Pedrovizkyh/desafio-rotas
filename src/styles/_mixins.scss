@@ -13,8 +13,8 @@
     border-radius: 14px;
     padding: 44px 50px;
     text-align: center;
-    margin-top: 50px;
-    margin-right: 20px;
+    //margin: 3rem 3rem 3rem 0;
+    //margin-right: 20px;
     
     p {
         margin-top: 30px;
@@ -26,9 +26,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 3rem;
+
+    
     
     @media (max-width: variaveis.$breakpoint-notebook) {
-        justify-content: center;;
+        justify-content: center;
       }
 }
 
