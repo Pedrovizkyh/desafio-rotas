@@ -35,7 +35,7 @@ Este projeto foi desenvolvido como um desafio para criar um portal informativo s
 - Cards informativos sobre diferentes áreas da saúde
 - Design acolhedor com paleta de cores temática
 
-### 📋 Página de Cadastro (`/cadastro`)
+### 📋 Página de Cadastro (`/seja-voluntario`)
 - Formulário de cadastro voluntário
 - Campos para informações pessoais
 - Seleção de área de interesse (médica ou odontológica)
