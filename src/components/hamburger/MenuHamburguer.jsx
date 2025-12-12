@@ -1,11 +1,15 @@
-// Hamburguer.jsx
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import s from './menuHamburguer.module.scss';
 import Button from '../button/Button';
 
 const Hamburguer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

@@ -11,11 +11,11 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
 
-    &:hover,
-            &:focus {
-              background-color: $cor-hover;
-              outline: none;
-            }
+    &:hover
+     {
+        background-color: $cor-hover;
+        outline: none;
+    }
 }
 
 @mixin article {
