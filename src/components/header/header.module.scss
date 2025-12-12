@@ -1,5 +1,6 @@
 @use '../../styles/variaveis.scss';
 @use '../../styles/mixins';
+@use 'sass:color';
 
 header {
     display: flex;
@@ -18,18 +19,31 @@ header {
     nav {
         display: flex;
         align-items: center;
+        gap: 1;
 
         .linkHome {
+            @include mixins.button(none, variaveis.$color-text-black, variaveis.$color-light-gray);
             margin-right: 30px;
-            font-size: 20px;
-            font-weight: 500;
-            color: variaveis.$color-text-black;
+
+            @media (max-width: variaveis.$breakpoint-mobile) {
+                display: none;
+              }
         }
 
         .linkVoluntario {
-            @include mixins.button;
-            background-color: variaveis.$color-primary;
-            color: white;
+            @include mixins.button(variaveis.$color-primary, variaveis.$color-white,  color.adjust(variaveis.$color-primary, $lightness: -10%));
+
+            &:hover,
+            &:focus {
+              // Corrigido: usando color.adjust() em vez de darken()
+              background-color: color.adjust(variaveis.$color-primary, $lightness: -10%);
+              outline: none;
+            }
+            
+
+            @media (max-width: variaveis.$breakpoint-mobile) {
+                display: none;
+              }
         }
     }
 }

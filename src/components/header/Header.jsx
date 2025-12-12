@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import s from './header.module.scss'
 import Button from '../button/Button'
 import Coracao from '../../assets/coracao.png'
+import Hamburguer from '../hamburger/MenuHamburguer'
 
 
 const Header = () => {
@@ -16,6 +17,7 @@ const Header = () => {
           <Link to='/' className={s.linkHome}>Home</Link>
           <Button to='/seja-voluntario' className={s.linkVoluntario} texto='Seja Voluntário' />
         </nav>
+        <Hamburguer/>
     </header>
   )
 }

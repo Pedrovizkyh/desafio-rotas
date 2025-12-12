@@ -1,5 +1,6 @@
 @use '../../styles/mixins';
 @use '../../styles/variaveis';
+@use 'sass:color';
 
 .mainVoluntario {
     padding: 8% 5%;
@@ -88,10 +89,8 @@
             }
 
             button {
-                @include mixins.button;
+                @include mixins.button(variaveis.$color-primary, variaveis.$color-white,  color.adjust(variaveis.$color-primary, $lightness: -10%));
                 border: none;
-                background-color: variaveis.$color-primary;
-                color: variaveis.$color-white;
             }
         }
     }

@@ -1,0 +1,102 @@
+// hamburguer.module.scss
+@use '../../styles/variaveis.scss';
+@use '../../styles/mixins';
+@use 'sass:color';
+
+.hamburguerContainer {
+  display: none;
+  position: relative;
+
+  @media (max-width: variaveis.$breakpoint-mobile) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Botão hambúrguer
+.hamburguerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+
+  &.active {
+    .hamburguerLine:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburguerLine:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburguerLine:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+}
+
+.hamburguerLine {
+  width: 100%;
+  height: 3px;
+  background-color: variaveis.$color-text-black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+// Menu dropdown
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 50vw;
+  background-color: variaveis.$color-white;
+  border: 1px solid variaveis.$color-text-black;
+  border-radius: 14px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.dropdownLink {
+  @include mixins.button(none, variaveis.$color-text-black, variaveis.$color-light-gray);
+}
+
+.dropdownButton {
+  @include mixins.button(variaveis.$color-primary, variaveis.$color-white, color.adjust(variaveis.$color-primary, $lightness: -10%));
+}
+
+// Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}

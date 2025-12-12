@@ -1,5 +1,6 @@
 @use '../../styles/variaveis.scss';
 @use '../../styles/mixins.scss';
+@use 'sass:color';
 
 // Primeira seção
 .firstMain {
@@ -73,13 +74,11 @@
       gap: 40px;
 
       .linkVoluntario {
-        @include mixins.button;
-        background-color: variaveis.$color-primary;
-        color: variaveis.$color-white;
+        @include mixins.button(variaveis.$color-primary, variaveis.$color-white,  color.adjust(variaveis.$color-primary, $lightness: -10%));
       }
 
       .linkAjuda {
-        @include mixins.button;
+        @include mixins.button(none, variaveis.$color-primary, variaveis.$color-light-gray);
         color: variaveis.$color-primary;
         border: 2px solid variaveis.$color-primary;
       }
