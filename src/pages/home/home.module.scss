@@ -4,10 +4,9 @@
 
 // Primeira seção
 .firstMain {
-  margin: 2% 5%;
+  margin: 8% 5%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
   background-image: url(../../assets/medico.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -54,7 +53,7 @@
       font-weight: bold;
 
       @media (max-width: variaveis.$breakpoint-header) {
-        margin: 100px auto 0 auto;
+        margin: 0 auto;
     }
 
       img {
